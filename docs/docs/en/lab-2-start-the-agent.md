@@ -160,7 +160,7 @@ In this lab, you'll enable two powerful tools that work together: the Code Inter
 
 From the web chat client, you can start a conversation with the agent. The agent is designed to answer questions about Zava's sales data and generate visualizations using the Code Interpreter.
 
-1.  Product sales analysis. Copy and paste the following question into the chat:
+1. Product sales analysis. Copy and paste the following question into the chat:
 
     ```text
     Show the top 10 products by revenue by store for the last quarter
@@ -190,10 +190,16 @@ From the web chat client, you can start a conversation with the agent. The agent
 
             ![Trace overview](../media/lab-7-trace-overview.png)
 
-2.  Generate a pie chart. Copy and paste the following question into the chat:
+2. Generate a pie chart. Copy and paste the following question into the chat:
 
     ```text
-    Show sales by store as a pie chart for this financial year
+    Show sales by store for this financial year
+    ```
+
+    then follow up with:
+
+    ```text
+    Show as a Pie Chart
     ```
 
     The agent will respond with a pie chart showing the sales distribution by store for the current financial year.
@@ -208,7 +214,7 @@ From the web chat client, you can start a conversation with the agent. The agent
         3. Using the returned data, the LLM writes Python code to create a Pie Chart.
         4. Finally, the Code Interpreter executes the Python code to generate the chart.
 
-3.  Continue asking questions about Zava sales data to see the Code Interpreter in action. Here are a few follow-up questions you might like to try:
+3. Continue asking questions about Zava sales data to see the Code Interpreter in action. Here are a few follow-up questions you might like to try:
 
     - `Determine which products or categories drive sales. Show as a Bar Chart.`
     - `What would be the impact of a shock event (e.g., 20% sales drop in one region) on global sales distribution? Show as a Grouped Bar Chart.`
