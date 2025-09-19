@@ -78,9 +78,15 @@ class Config:
                         if len(urls) >= 2:
                             # Use the second URL and append /mcp
                             return urls[1].rstrip("/") + "/mcp"
-            return ""
+            # remove the file if we reach here
+            log_file_path.unlink(missing_ok=True)
+            raise RuntimeError(
+                "Dev tunnel URL not found in log file. Ensure the devtunnel is authenticated (devtunnel login) and running. Be sure to stop the Dev Tunnel task before restarting the application."
+            )
         except (FileNotFoundError, Exception):
-            return ""
+            raise RuntimeError(
+                "The devtunnel log file not found or could not be read. Ensure the devtunnel is authenticated (devtunnel login) and running. Be sure to stop the Dev Tunnel task before restarting the application."
+            ) from None
 
     # Properties for all configuration values
     @property
