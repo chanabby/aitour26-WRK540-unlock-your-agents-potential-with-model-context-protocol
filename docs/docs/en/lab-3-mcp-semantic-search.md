@@ -117,8 +117,8 @@ From VS Code, stop the agent app by pressing <kbd>Shift + F5</kbd>.
     In this section, you will implement semantic search using the Model Context Protocol (MCP) to enhance the agent's capabilities.
 
     1. Select the **Explorer** icon from the sidebar of VS Code.
-    2. Navtigate to the `mcp_server\sales_analysis` folder.
-    3. Open the `sales_analysis_tools.py` file.
+    2. Navigate to the `mcp_server/sales_analysis` folder.
+    3. Open the `sales_analysis.py` file.
         
         This file contains the MCP tools for the sales analysis agent, including the semantic search tool.
 
